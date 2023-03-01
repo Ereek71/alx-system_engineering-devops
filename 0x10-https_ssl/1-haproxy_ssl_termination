@@ -67,4 +67,4 @@ backend www-backend
 backend letsencrypt-backend
 	server letsencrypt 127.0.0.1:54321
 
-	
+	redirect scheme https code 301 if !{ ssl_fc }
